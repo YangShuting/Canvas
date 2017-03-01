@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Guess Letter</title>
+		<script src="modernizr.js"></script>
+		<script>
+		//Module code from the book: HTML5 Canvas
+			//Add event listener to window load
+			window.addEventListener('load', eventWindowLoaded, false);
+			function eventWindowLoaded(){
+				canvasApp();
+			}
+			// Test if the browser supports canvas
+			function canvasSupport(){
+				return Modernizr.canvas;
+			}
+			// do something if does.....
+			function canvasApp(){
+				if(!canvasSupport()) return;
+				var theCanvas = document.getElementById('canvas');
+				var context = theCanvas.getContext('2d');
+				drawScreen();
+
+				function drawScreen(){
+					// todo:
+
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div style="position: absolute; top: 50px; left: 50px">
+			<p>Canvas here:</p>
+			<canvas id="canvas" width="500" height="500">
+				Your browser does not support HTML5 Canvas.
+			</canvas>
+		</div>
+	</body>
+</html>
